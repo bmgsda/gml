@@ -1,0 +1,12 @@
+CREATE TABLE automation_items(
+	id_item SERIAL PRIMARY KEY,
+	status VARCHAR(255) NOT NULL,
+	fila INTEGER NOT NULL,
+	resultado VARCHAR(255)
+)
+
+SELECT * FROM automation_items ORDER BY id_item
+
+UPDATE automation_items SET status = 'PENDENTE'
+
+UPDATE automation_items SET status = 'PROCESSADO', resultado = 'OK' WHERE id_item = 13
